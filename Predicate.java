@@ -27,11 +27,6 @@ public class Marks {
 		
 		
 		
-		if(num == 0)
-		{
-			System.out.println("Okay Bye Bye");
-		}
-		else
 
 			for(int i = 0; i < num; i++)
 			{
@@ -39,37 +34,28 @@ public class Marks {
 				subj[i] = sc.next();
 				
 				System.out.println("Enter the Subject Mark " + (i + 1));
-				mark[i] = sc.nextDouble();
+				mark[i] = Math.round(sc.nextDouble());
 			}
 			
 			
 			
 			for(int x = 0; x < num; x++)
-			{
-				if(mark[x] == 48.5 ||  mark[x] == 49)
-				{
-					mark[x] = Math.ceil(mark[x]);
-					
+			{	
 					if(mark[x] == 49)
 					{
 						mark[x] = 50;
 					}
-				}
 				
-				if(mark[x] == 73.5 || mark[x] == 74)
-				{	
-						mark[x] = Math.ceil(mark[x]);
-					
+				else
+							
 					if(mark[x] == 74)
 					{
 						mark[x] = 75;
 					}
-					
-				}
+				
 			}
 			
-			
-			
+
 			for(int z = 1; z < num;z++ )
 			{
 				if(mark[z] > highest)
